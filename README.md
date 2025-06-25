@@ -4,7 +4,7 @@
 
 [![StackNucleus.DDD.Domain](https://img.shields.io/nuget/v/StackNucleus.DDD.Domain)](https://www.nuget.org/packages/StackNucleus.DDD.Domain)
 
-![logo](https://github.com/user-attachments/assets/8c55fc27-b3aa-4ccf-a396-9351c4fbed5c)
+![logo](https://github.com/user-attachments/assets/e3b349a6-0c3f-4fba-9f02-b4a94790d445)
 
 ## Overview
 
