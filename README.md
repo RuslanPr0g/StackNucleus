@@ -2,7 +2,9 @@
 
 ## NuGet Packages
 
-**Coming Soon...**
+[![StackNucleus.DDD.Domain](https://img.shields.io/nuget/v/StackNucleus.DDD.Domain)](https://www.nuget.org/packages/StackNucleus.DDD.Domain)
+
+![logo](https://github.com/user-attachments/assets/8c55fc27-b3aa-4ccf-a396-9351c4fbed5c)
 
 ## Overview
 
