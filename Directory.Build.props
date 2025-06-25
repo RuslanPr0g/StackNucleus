@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>RuslanPr0g</Authors>
+    <Company>StackNucleus Contributors</Company>
+    <Product>StackNucleus</Product>
+    <Version>1.0.0-alpha.1</Version>
+    <Description>Modular DDD building blocks — entities, aggregates, repositories, and services for enterprise apps.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/RuslanPr0g/StackNucleus</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>file system pipeline watcher reactive</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+</Project>
