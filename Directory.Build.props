@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
+    <TargetFramework>net8.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>RuslanPr0g</Authors>
     <Company>StackNucleus Contributors</Company>
@@ -10,7 +10,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/RuslanPr0g/StackNucleus</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>file system pipeline watcher reactive</PackageTags>
+    <PackageTags>ddd modular entity aggregate enterprise</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
