@@ -7,9 +7,9 @@ namespace StackNucleus.DDD.Persistence.EF.Postgres;
 
 /// <summary>
 /// Represents a base class for DbContexts that implements common auditing, outbox messaging, and schema configuration.
-/// This class can be used as the base context for enterprise applications requiring a consistent schema and audit tracking.
+/// This class can be used as the base context for applications requiring a consistent schema and audit tracking.
 /// </summary>
-public abstract class BaseEnterpriseContext<TContext> : DbContext
+public abstract class BaseNucleusContext<TContext> : DbContext
     where TContext : DbContext
 {
     /// <summary>

@@ -11,7 +11,7 @@ namespace StackNucleus.DDD.Persistence.EF.Postgres;
 /// <typeparam name="TContext">
 /// The type of the DbContext to be created. This should be a subclass of <see cref="DbContext"/>.
 /// </typeparam>
-public abstract class EnterpriseDatabaseDesignTimeDbContextFactory<TContext>
+public abstract class NucleusDatabaseDesignTimeDbContextFactory<TContext>
     : IDesignTimeDbContextFactory<TContext>
     where TContext : DbContext
 {
