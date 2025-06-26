@@ -7,7 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "package", "package", "{02EA
 	ProjectSection(SolutionItems) = preProject
 		StackNucleus.DDD.Domain\CHANGELOG.md = StackNucleus.DDD.Domain\CHANGELOG.md
 		StackNucleus.DDD.Generators\CHANGELOG.md = StackNucleus.DDD.Generators\CHANGELOG.md
-		StackNucleus.DDD.Events\CHANGELOG.md = StackNucleus.DDD.Events\CHANGELOG.md
 		StackNucleus.DDD.Persistence\CHANGELOG.md = StackNucleus.DDD.Persistence\CHANGELOG.md
 		StackNucleus.DDD.Persistence.EF.Postgres\CHANGELOG.md = StackNucleus.DDD.Persistence.EF.Postgres\CHANGELOG.md
 		..\Directory.Build.props = ..\Directory.Build.props
