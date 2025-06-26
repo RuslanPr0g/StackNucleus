@@ -12,6 +12,16 @@ namespace StackNucleus.DDD.Persistence.EF.Postgres;
 public abstract class BaseNucleusContext<TContext> : DbContext
     where TContext : DbContext
 {
+    /// <inheritdoc cref="DbContext" />
+    protected BaseNucleusContext()
+    {
+    }
+
+    /// <inheritdoc cref="DbContext" />
+    protected BaseNucleusContext(DbContextOptions options) : base(options)
+    {
+    }
+
     /// <summary>
     /// Gets the schema name to be used for the database context.
     /// Subclasses must implement this property to provide the schema name.
