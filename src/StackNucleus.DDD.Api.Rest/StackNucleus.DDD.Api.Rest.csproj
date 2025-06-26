@@ -24,6 +24,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StackNucleus.DDD.Domain\StackNucleus.DDD.Domain.csproj" />
+    <ProjectReference Include="..\StackNucleus.DDD.Events.WolverineFx\StackNucleus.DDD.Events.WolverineFx.csproj" />
+    <ProjectReference Include="..\StackNucleus.DDD.Generators\StackNucleus.DDD.Generators.csproj" />
+    <ProjectReference Include="..\StackNucleus.DDD.Persistence.EF.Postgres\StackNucleus.DDD.Persistence.EF.Postgres.csproj" />
+    <ProjectReference Include="..\StackNucleus.DDD.Persistence\StackNucleus.DDD.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

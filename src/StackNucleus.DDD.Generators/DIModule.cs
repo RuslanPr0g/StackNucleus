@@ -9,7 +9,7 @@ namespace StackNucleus.DDD.Generators;
 public static class DIModule
 {
     /// <inheritdoc cref="DIModule" />
-    public static IServiceCollection AddEnterpriseGenerators(this IServiceCollection services)
+    public static IServiceCollection AddNucleusGenerators(this IServiceCollection services)
     {
         services.AddSingleton<IIdGenerator, IdGenerator>();
         return services;

@@ -18,7 +18,7 @@ public static class DIModule
     /// <returns>
     /// The updated <see cref="IServiceCollection"/> with the event publisher registered.
     /// </returns>
-    public static IServiceCollection AddEnterpriseEventPublishers(this IServiceCollection services)
+    public static IServiceCollection AddNucleusEventPublishers(this IServiceCollection services)
     {
         services.AddScoped<IEventPublisher, BaseEventPublisher>();
         return services;
