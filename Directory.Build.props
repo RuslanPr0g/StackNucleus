@@ -5,7 +5,7 @@
     <Authors>RuslanPr0g</Authors>
     <Company>StackNucleus Contributors</Company>
     <Product>StackNucleus</Product>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Description>Modular DDD building blocks — entities, aggregates, repositories, and services for enterprise apps.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/RuslanPr0g/StackNucleus</RepositoryUrl>
