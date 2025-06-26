@@ -7,6 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "package", "package", "{02EA
 	ProjectSection(SolutionItems) = preProject
 		StackNucleus.DDD.Domain\CHANGELOG.md = StackNucleus.DDD.Domain\CHANGELOG.md
 		StackNucleus.DDD.Generators\CHANGELOG.md = StackNucleus.DDD.Generators\CHANGELOG.md
+		StackNucleus.DDD.Events\CHANGELOG.md = StackNucleus.DDD.Events\CHANGELOG.md
+		StackNucleus.DDD.Persistence\CHANGELOG.md = StackNucleus.DDD.Persistence\CHANGELOG.md
+		StackNucleus.DDD.Persistence.EF.Postgres\CHANGELOG.md = StackNucleus.DDD.Persistence.EF.Postgres\CHANGELOG.md
 		..\Directory.Build.props = ..\Directory.Build.props
 		..\Directory.Build.targets = ..\Directory.Build.targets
 	EndProjectSection
@@ -16,6 +19,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackNucleus.DDD.Domain", "StackNucleus.DDD.Domain\StackNucleus.DDD.Domain.csproj", "{CDBDACB7-2344-2F58-383C-B439E320C4F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackNucleus.DDD.Generators", "StackNucleus.DDD.Generators\StackNucleus.DDD.Generators.csproj", "{C189AF1E-F505-44EC-BB4F-42643E947C31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackNucleus.DDD.Persistence", "StackNucleus.DDD.Persistence\StackNucleus.DDD.Persistence.csproj", "{63A3D1F7-8EF6-8F2F-4A2B-10ED1060CC49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackNucleus.DDD.Persistence.EF.Postgres", "StackNucleus.DDD.Persistence.EF.Postgres\StackNucleus.DDD.Persistence.EF.Postgres.csproj", "{8947480A-9960-FFBF-2886-5BD8DD5C9034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackNucleus.DDD.Api.Rest", "StackNucleus.DDD.Api.Rest\StackNucleus.DDD.Api.Rest.csproj", "{6E404533-F4FA-8CEF-71A5-FB167173163C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackNucleus.DDD.Events.WolverineFx", "StackNucleus.DDD.Events.WolverineFx\StackNucleus.DDD.Events.WolverineFx.csproj", "{DA7B17B0-9218-9092-0FBA-DD1B2B6D3CCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +42,22 @@ Global
 		{C189AF1E-F505-44EC-BB4F-42643E947C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C189AF1E-F505-44EC-BB4F-42643E947C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C189AF1E-F505-44EC-BB4F-42643E947C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63A3D1F7-8EF6-8F2F-4A2B-10ED1060CC49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A3D1F7-8EF6-8F2F-4A2B-10ED1060CC49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A3D1F7-8EF6-8F2F-4A2B-10ED1060CC49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63A3D1F7-8EF6-8F2F-4A2B-10ED1060CC49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8947480A-9960-FFBF-2886-5BD8DD5C9034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8947480A-9960-FFBF-2886-5BD8DD5C9034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8947480A-9960-FFBF-2886-5BD8DD5C9034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8947480A-9960-FFBF-2886-5BD8DD5C9034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E404533-F4FA-8CEF-71A5-FB167173163C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E404533-F4FA-8CEF-71A5-FB167173163C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E404533-F4FA-8CEF-71A5-FB167173163C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E404533-F4FA-8CEF-71A5-FB167173163C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7B17B0-9218-9092-0FBA-DD1B2B6D3CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7B17B0-9218-9092-0FBA-DD1B2B6D3CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7B17B0-9218-9092-0FBA-DD1B2B6D3CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7B17B0-9218-9092-0FBA-DD1B2B6D3CCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +65,10 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CDBDACB7-2344-2F58-383C-B439E320C4F3} = {F648BFEE-85EF-4F87-8C3E-62E0F91836DC}
 		{C189AF1E-F505-44EC-BB4F-42643E947C31} = {F648BFEE-85EF-4F87-8C3E-62E0F91836DC}
+		{63A3D1F7-8EF6-8F2F-4A2B-10ED1060CC49} = {F648BFEE-85EF-4F87-8C3E-62E0F91836DC}
+		{8947480A-9960-FFBF-2886-5BD8DD5C9034} = {F648BFEE-85EF-4F87-8C3E-62E0F91836DC}
+		{6E404533-F4FA-8CEF-71A5-FB167173163C} = {F648BFEE-85EF-4F87-8C3E-62E0F91836DC}
+		{DA7B17B0-9218-9092-0FBA-DD1B2B6D3CCC} = {F648BFEE-85EF-4F87-8C3E-62E0F91836DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E86BF02-A824-4AD0-A483-899A5588F012}
