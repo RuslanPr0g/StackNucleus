@@ -26,7 +26,7 @@ public abstract class AggregateRoot<T> : Entity<T>, IAggregateRoot where T : Ide
     /// Gets the collection of domain events associated with this aggregate root.
     /// Domain events represent business events that are important for this aggregate.
     /// </summary>
-    public IReadOnlyCollection<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
+    public IReadOnlyCollection<IDomainEvent> DomainEvents => _domainEvents.ToList().AsReadOnly();
 
     /// <summary>
     /// Clears all domain events from the aggregate root after they have been handled or persisted.

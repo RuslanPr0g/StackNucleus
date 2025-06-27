@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project follows [Semantic Versioning (SemVer)](https://semver.org/).
 
+## [1.0.3] - 2025-06-26
+
+### Changed
+
+- Fix domain events on aggregate root to be truly readonly.
+
 ## [1.0.2] - 2025-06-26
 
 ### Added
