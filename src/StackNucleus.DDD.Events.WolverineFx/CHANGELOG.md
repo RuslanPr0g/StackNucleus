@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project follows [Semantic Versioning (SemVer)](https://semver.org/).
 
+## [1.1.0] - 2025-09-05
+
+### Changed
+
+- Version bumped to 1.1.0 to reflect new release cycle. No functional changes.
+
 ## [1.0.3] - 2025-06-26
 
 ### Changed

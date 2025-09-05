@@ -1,11 +1,11 @@
 <Project>
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>RuslanPr0g</Authors>
     <Company>StackNucleus Contributors</Company>
     <Product>StackNucleus</Product>
-    <Version>1.0.3</Version>
+    <Version>1.1.0</Version>
     <Description>Modular DDD building blocks — entities, aggregates, repositories, and services for enterprise apps.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/RuslanPr0g/StackNucleus</RepositoryUrl>
