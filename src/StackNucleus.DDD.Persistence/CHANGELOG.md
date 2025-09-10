@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project follows [Semantic Versioning (SemVer)](https://semver.org/).
 
+## [1.2.0] - 2025-09-10
+
+### Added
+
+- New Queried and Queryable models to handle pagination
+
 ## [1.1.0] - 2025-09-05
 
 ### Changed
