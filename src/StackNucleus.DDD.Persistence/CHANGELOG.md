@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project follows [Semantic Versioning (SemVer)](https://semver.org/).
 
+## [1.3.0] - 2025-09-11
+
+### Added
+
+- Support for images, jobs, outbox, and more
+
 ## [1.2.0] - 2025-09-10
 
 ### Added

@@ -21,6 +21,7 @@ Whether you're building a greenfield system or refactoring a legacy monolith, St
 - Domain service scaffolding for encapsulating business logic
 - Rich support for validation and value object modeling
 - Minimal dependencies, works with any persistence provider
+- Reusable components and jobs for an easy start or ease of use
 
 ---
 
