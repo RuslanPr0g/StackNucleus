@@ -3,6 +3,7 @@ using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Processing;
 using StackNucleus.DDD.Domain.Images;
 using StackNucleus.DDD.Domain.Images.Compressors;
+using StackNucleus.DDD.Domain.ResultModels;
 
 namespace StackNucleus.DDD.Images.Compressors;
 
@@ -17,7 +18,7 @@ public sealed class DefaultImageCompressor : IImageCompressor
     /// <param name="imagePreview">The image preview in byte array format.</param>
     /// <param name="settings">The compression settings to apply.</param>
     /// <returns>A byte array representing the compressed image.</returns>
-    public ValueTask<byte[]> CompressAsync(byte[] imagePreview, CompressionSettings settings)
+    public ValueTask<OperationResult<byte[]>> CompressAsync(byte[] imagePreview, CompressionSettings settings)
     {
         using var image = Image.Load(imagePreview);
         int maxWidth = settings.MaxWidth;
@@ -34,6 +35,6 @@ public sealed class DefaultImageCompressor : IImageCompressor
 
         using var ms = new MemoryStream();
         image.Save(ms, new JpegEncoder { Quality = 75 });
-        return ValueTask.FromResult(ms.ToArray());
+        return ValueTask.FromResult(OperationResult<byte[]>.CreateSuccess(ms.ToArray()));
     }
 }
