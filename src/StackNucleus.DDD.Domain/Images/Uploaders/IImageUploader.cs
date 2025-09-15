@@ -13,7 +13,7 @@ public interface IImageUploader
     /// <param name="request">The request for the image upload process.</param>
     /// <param name="cancellationToken">Cancellation token</param>
     /// <returns>The response consisting of result and image urls.</returns>
-    Task<OperationResult<UploadImageResponse>> UploadImageAsync(
+    Task<ValueOrNull<UploadImageResponse>> UploadImageAsync(
         UploadImageRequest request,
         CancellationToken cancellationToken = default);
 }

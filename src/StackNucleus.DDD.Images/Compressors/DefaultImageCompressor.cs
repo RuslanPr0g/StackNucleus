@@ -18,7 +18,7 @@ public sealed class DefaultImageCompressor : IImageCompressor
     /// <param name="imagePreview">The image preview in byte array format.</param>
     /// <param name="settings">The compression settings to apply.</param>
     /// <returns>A byte array representing the compressed image.</returns>
-    public ValueTask<OperationResult<byte[]>> CompressAsync(byte[] imagePreview, CompressionSettings settings)
+    public ValueTask<ValueOrNull<byte[]>> CompressAsync(byte[] imagePreview, CompressionSettings settings)
     {
         using var image = Image.Load(imagePreview);
         int maxWidth = settings.MaxWidth;
@@ -35,6 +35,6 @@ public sealed class DefaultImageCompressor : IImageCompressor
 
         using var ms = new MemoryStream();
         image.Save(ms, new JpegEncoder { Quality = 75 });
-        return ValueTask.FromResult(OperationResult<byte[]>.CreateSuccess(ms.ToArray()));
+        return ValueTask.FromResult(ValueOrNull<byte[]>.Success(ms.ToArray()));
     }
 }
