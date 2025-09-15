@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using StackNucleus.DDD.Domain.Images;
+using StackNucleus.DDD.Domain.Images.Compressors;
 using StackNucleus.DDD.Images.Compressors;
 
 namespace StackNucleus.DDD.Images;
