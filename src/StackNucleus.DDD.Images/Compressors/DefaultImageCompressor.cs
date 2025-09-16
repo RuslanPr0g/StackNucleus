@@ -1,9 +1,9 @@
 ﻿using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Processing;
+using StackNucleus.DDD.Domain;
 using StackNucleus.DDD.Domain.Images;
 using StackNucleus.DDD.Domain.Images.Compressors;
-using StackNucleus.DDD.Domain.ResultModels;
 
 namespace StackNucleus.DDD.Images.Compressors;
 

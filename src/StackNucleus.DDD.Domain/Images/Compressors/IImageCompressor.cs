@@ -1,6 +1,4 @@
-﻿using StackNucleus.DDD.Domain.ResultModels;
-
-namespace StackNucleus.DDD.Domain.Images.Compressors;
+﻿namespace StackNucleus.DDD.Domain.Images.Compressors;
 
 /// <summary>
 /// Defines the contract for compressing images with customizable settings.
