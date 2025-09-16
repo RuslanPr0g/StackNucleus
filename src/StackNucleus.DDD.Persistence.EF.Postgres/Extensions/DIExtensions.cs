@@ -33,6 +33,9 @@ public static class DIExtensions
     /// <param name="migrationsHistoryTableSchemaName">
     /// The schema name for the migrations history table. Defaults to "public".
     /// </param>
+    /// <param name="migrateDatabase">
+    /// Whether to migrate the database at startup. Default is true.
+    /// </param>
     /// <returns>
     /// The <see cref="IServiceCollection"/> to allow for method chaining.
     /// </returns>
@@ -46,7 +49,8 @@ public static class DIExtensions
         IConfiguration configuration,
         string migrationsAssemblyName,
         string connectionStringName = "postgres",
-        string migrationsHistoryTableSchemaName = "public")
+        string migrationsHistoryTableSchemaName = "public",
+        bool migrateDatabase = true)
         where TContext : DbContext
     {
         services.AddSingleton<ConvertDomainEventsToOutboxMessagesInterceptor>();
@@ -67,10 +71,13 @@ public static class DIExtensions
                 .AddInterceptors(interceptor!);
         });
 
-        using (var scope = services.BuildServiceProvider().CreateScope())
+        if (migrateDatabase)
         {
-            var db = scope.ServiceProvider.GetRequiredService<TContext>();
-            db.Database.Migrate();
+            using (var scope = services.BuildServiceProvider().CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<TContext>();
+                db.Database.Migrate();
+            }
         }
 
         return services;

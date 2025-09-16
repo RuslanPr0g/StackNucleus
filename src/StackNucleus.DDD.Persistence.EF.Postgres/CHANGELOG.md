@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project follows [Semantic Versioning (SemVer)](https://semver.org/).
 
+## [2.0.1] - 2025-09-16
+
+### Changed
+
+- Add ability to skip the database migration on startup when using the extension method to set up the db context.
+
 ## [2.0.0] - 2025-09-11
 
 ### Changed
