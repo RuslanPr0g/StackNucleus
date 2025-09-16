@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project follows [Semantic Versioning (SemVer)](https://semver.org/).
 
+## [2.2.1] - 2025-09-16
+
+### Changed
+
+- Namespace improvements.
+
 ## [2.2.0] - 2025-09-15
 
 ### Added

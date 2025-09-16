@@ -1,4 +1,4 @@
-﻿namespace StackNucleus.DDD.Domain.Images.Uploaders;
+﻿namespace StackNucleus.DDD.Domain.Images;
 
 /// <summary>
 /// Maps a generated image URL to its corresponding size.

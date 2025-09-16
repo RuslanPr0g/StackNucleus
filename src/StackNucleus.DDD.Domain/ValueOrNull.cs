@@ -1,4 +1,4 @@
-namespace StackNucleus.DDD.Domain.ResultModels;
+namespace StackNucleus.DDD.Domain;
 
 /// <summary>
 /// Represents either a successful value or a failure with an error message.
