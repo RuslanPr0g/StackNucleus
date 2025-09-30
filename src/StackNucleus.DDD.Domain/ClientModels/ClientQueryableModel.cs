@@ -11,12 +11,12 @@ public record ClientQueryableModel
     /// <summary>
     /// The zero-based index of the first item to retrieve.
     /// </summary>
-    public required long StartIndex { get; set; }
+    public required int StartIndex { get; set; }
 
     /// <summary>
     /// The number of items to retrieve for the current query.
     /// </summary>
-    public required long ItemsCount { get; set; }
+    public required int ItemsCount { get; set; }
 
     /// <summary>
     /// The property name used to sort the query results.
