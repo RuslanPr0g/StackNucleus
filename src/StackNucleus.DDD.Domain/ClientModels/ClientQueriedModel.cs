@@ -20,12 +20,12 @@ public sealed class ClientQueriedModel<T> where T : class
     /// <summary>
     /// The total number of items available in the data source for the query.
     /// </summary>
-    public required int TotalItemsCount { get; set; }
+    public required long TotalItemsCount { get; set; }
 
     /// <summary>
     /// The number of items returned in the current page. Optional.
     /// </summary>
-    public int? ItemsPerCurrentPageCount { get; set; } = null;
+    public long? ItemsPerCurrentPageCount { get; set; } = null;
 
     /// <summary>
     /// Creates a new instance of <see cref="ClientQueriedModel{T}"/> with the provided items and total count.
@@ -33,7 +33,7 @@ public sealed class ClientQueriedModel<T> where T : class
     /// <param name="items">The collection of items retrieved by the query.</param>
     /// <param name="totalCount">The total number of items available.</param>
     /// <returns>A new <see cref="ClientQueriedModel{T}"/> instance.</returns>
-    public static ClientQueriedModel<T> Create(IEnumerable<T> items, int totalCount)
+    public static ClientQueriedModel<T> Create(IEnumerable<T> items, long totalCount)
     {
         return new ClientQueriedModel<T>()
         {
@@ -50,7 +50,7 @@ public sealed class ClientQueriedModel<T> where T : class
     /// <param name="totalCount">The total number of items available.</param>
     /// <param name="itemsPerPage">The number of items returned in the current page.</param>
     /// <returns>A new <see cref="ClientQueriedModel{T}"/> instance.</returns>
-    public static ClientQueriedModel<T> Create(IEnumerable<T> items, int totalCount, int itemsPerPage)
+    public static ClientQueriedModel<T> Create(IEnumerable<T> items, long totalCount, long itemsPerPage)
     {
         return new ClientQueriedModel<T>()
         {
