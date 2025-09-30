@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project follows [Semantic Versioning (SemVer)](https://semver.org/).
 
+## [3.2.0] - 2025-09-30
+
+### Changed
+
+- Make sizes as long in the ClientQueryableModel.
+
 ## [3.1.0] - 2025-09-30
 
 ### Changed
