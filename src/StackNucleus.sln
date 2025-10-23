@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackNucleus.DDD.Images", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackNucleus.DDD.Application", "StackNucleus.DDD.Application\StackNucleus.DDD.Application.csproj", "{1CA64ED6-6124-13E5-01AF-B248775F0ACB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackNucleus.DDD.Scripts", "StackNucleus.DDD.Scripts\StackNucleus.DDD.Scripts.csproj", "{68AD1E3E-BBED-2B06-4740-DA62D68F7D0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{1CA64ED6-6124-13E5-01AF-B248775F0ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CA64ED6-6124-13E5-01AF-B248775F0ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CA64ED6-6124-13E5-01AF-B248775F0ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68AD1E3E-BBED-2B06-4740-DA62D68F7D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68AD1E3E-BBED-2B06-4740-DA62D68F7D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68AD1E3E-BBED-2B06-4740-DA62D68F7D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68AD1E3E-BBED-2B06-4740-DA62D68F7D0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +108,7 @@ Global
 		{D2A8A658-40E7-B7B4-7D06-70AE290138C6} = {F648BFEE-85EF-4F87-8C3E-62E0F91836DC}
 		{848F6CCB-A187-AED8-D5BE-3BE02D46FE4A} = {F648BFEE-85EF-4F87-8C3E-62E0F91836DC}
 		{1CA64ED6-6124-13E5-01AF-B248775F0ACB} = {F648BFEE-85EF-4F87-8C3E-62E0F91836DC}
+		{68AD1E3E-BBED-2B06-4740-DA62D68F7D0E} = {F648BFEE-85EF-4F87-8C3E-62E0F91836DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E86BF02-A824-4AD0-A483-899A5588F012}

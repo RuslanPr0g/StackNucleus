@@ -3,14 +3,19 @@
   <PropertyGroup>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
       <None Include="README.md" Pack="true" PackagePath="\" />
-      <None Include="../SharedMetadata/CHANGELOG.md" Pack="true" PackagePath="\" />
+      <None Include="CHANGELOG.md" Pack="true" PackagePath="\" />
       <None Include="../SharedMetadata/logo.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="scripts/*.sh" Pack="true" PackagePath="scripts/" />
   </ItemGroup>
 
 </Project>
