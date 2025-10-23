@@ -6,7 +6,7 @@
 
     <Copy
       SourceFiles="@(ScriptFiles)"
-      DestinationFolder="$(MSBuildProjectDirectory)"
+      DestinationFolder="$(MSBuildProjectDirectory)\scripts"
       SkipUnchangedFiles="true" />
   </Target>
 </Project>
