@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
@@ -15,7 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="scripts/*.sh" Pack="true" PackagePath="scripts/" />
+    <Content Include="scripts/*.sh" Pack="true" PackagePath="contentFiles/any/any/scripts/" BuildAction="None" />
+    <None Include="build/CopyScripts.targets" Pack="true" PackagePath="build/" />
   </ItemGroup>
 
 </Project>

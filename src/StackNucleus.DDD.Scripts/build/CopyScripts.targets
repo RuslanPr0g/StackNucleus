@@ -1,0 +1,12 @@
+<Project>
+  <Target Name="CopyScriptsToProjectRoot" AfterTargets="Restore">
+    <ItemGroup>
+      <ScriptFiles Include="$(MSBuildThisFileDirectory)..\contentFiles\any\any\scripts\*.sh" />
+    </ItemGroup>
+
+    <Copy
+      SourceFiles="@(ScriptFiles)"
+      DestinationFolder="$(MSBuildProjectDirectory)"
+      SkipUnchangedFiles="true" />
+  </Target>
+</Project>
