@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="scripts/*.sh" Pack="true" PackagePath="contentFiles/any/any/scripts/" BuildAction="None" />
+    <Content Include="scripts/**" Pack="true" PackagePath="contentFiles/any/any/.scripts/" BuildAction="None" />
     <None Include="build/StackNucleus.DDD.Scripts.targets" Pack="true" PackagePath="build/" />
   </ItemGroup>
 

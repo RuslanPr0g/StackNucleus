@@ -1,12 +1,19 @@
 <Project>
-  <Target Name="CopyScriptsToProjectRoot" AfterTargets="Restore">
+  <Target Name="CopyBackendScriptsOnce"
+          BeforeTargets="PrepareForBuild"
+          Condition="'$(DisableCentralScriptCopy)' != 'true'">
+    <PropertyGroup>
+      <CentralScriptsDestination>$([System.IO.Path]::GetFullPath('$(SolutionDir)../.scripts'))</CentralScriptsDestination>
+    </PropertyGroup>
+
     <ItemGroup>
-      <ScriptFiles Include="$(MSBuildThisFileDirectory)..\contentFiles\any\any\scripts\*.sh" />
+      <_ScriptFiles Include="$(MSBuildThisFileDirectory)..\\contentFiles\\any\\any\\.scripts\\**\\*.*" />
     </ItemGroup>
 
-    <Copy
-      SourceFiles="@(ScriptFiles)"
-      DestinationFolder="$(MSBuildProjectDirectory)\scripts"
-      SkipUnchangedFiles="true" />
+    <MakeDir Directories="@(_ScriptFiles->'$(CentralScriptsDestination)\\%(RecursiveDir)')" />
+
+    <Copy SourceFiles="@(_ScriptFiles)"
+          DestinationFiles="@(_ScriptFiles->'$(CentralScriptsDestination)\\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
   </Target>
 </Project>
