@@ -8,7 +8,7 @@ This project follows [Semantic Versioning (SemVer)](https://semver.org/).
 
 ### Changed
 
-- Move to .NET 10.
+- Move to .NET 10!
 
 ## [3.2.0] - 2025-10-23
 
