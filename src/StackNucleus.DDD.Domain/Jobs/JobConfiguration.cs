@@ -9,6 +9,11 @@ public sealed class JobConfiguration
     public string Key { get; set; }
 
     /// <summary>
+    /// Gets or sets the description.
+    /// </summary>
+    public string Description { get; set; }
+
+    /// <summary>
     /// Gets or sets the type of the job.
     /// </summary>
     public Type Type { get; set; }

@@ -22,7 +22,10 @@ public static class DIExtensions
         {
             foreach (var job in jobConfigurations)
             {
-                conf.AddJob(job.Type, new JobKey(job.Key)).AddTrigger(trigger =>
+                conf.AddJob(job.Type, new JobKey(job.Key), jobConfig =>
+                {
+                    jobConfig.WithDescription(string.IsNullOrWhiteSpace(job.Description) ? job.Key : job.Description);
+                }).AddTrigger(trigger =>
                 {
                     var configurator = trigger.ForJob(job.Key);
 

@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
-    <TargetFrameworks>net8.0</TargetFrameworks>
-    <Version>3.4.0</Version>
+    <TargetFrameworks>net10.0</TargetFrameworks>
+    <Version>4.0.0-rc.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>RuslanPr0g</Authors>
     <Company>StackNucleus Contributors</Company>
