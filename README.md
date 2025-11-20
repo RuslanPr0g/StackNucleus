@@ -12,7 +12,7 @@
 [![StackNucleus.DDD.Application](https://img.shields.io/nuget/v/StackNucleus.DDD.Application)](https://www.nuget.org/packages/StackNucleus.DDD.Application)
 [![StackNucleus.DDD.Images](https://img.shields.io/nuget/v/StackNucleus.DDD.Images)](https://www.nuget.org/packages/StackNucleus.DDD.Images)
 [![StackNucleus.DDD.Jobs.Quartz](https://img.shields.io/nuget/v/StackNucleus.DDD.Jobs.Quartz)](https://www.nuget.org/packages/StackNucleus.DDD.Jobs.Quartz)
-[![StackNucleus.DDD.Scripts](https://img.shields.io/nuget/v/StackNucleus.DDD.Jobs.Scripts)](https://www.nuget.org/packages/StackNucleus.DDD.Jobs.Scripts)
+[![StackNucleus.DDD.Scripts](https://img.shields.io/nuget/v/StackNucleus.DDD.Scripts)](https://www.nuget.org/packages/StackNucleus.DDD.Scripts)
 
 ![logo](https://github.com/user-attachments/assets/e3b349a6-0c3f-4fba-9f02-b4a94790d445)
 
