@@ -10,7 +10,6 @@ on:
 
 env:
   SOLUTION_PATH: "src/StackNucleus.sln"
-  NUGET_DIRR: "nupkg"
   NUGET_SRC_URL: "https://api.nuget.org/v3/index.json"
 
 jobs:
