@@ -8,8 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="WolverineFx" Version="5.2.0" />
-        <PackageReference Include="WolverineFx.RabbitMq" Version="5.2.0" />
+        <PackageReference Include="WolverineFx" Version="5.27.0" />
+        <PackageReference Include="WolverineFx.RabbitMq" Version="5.27.0" />
     </ItemGroup>
 
     <ItemGroup>

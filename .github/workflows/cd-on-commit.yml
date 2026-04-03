@@ -13,7 +13,7 @@ env:
   NUGET_SRC_URL: "https://api.nuget.org/v3/index.json"
 
 jobs:
-  deploy-on-commit:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the source code
