@@ -42,6 +42,6 @@ public sealed record CurrentUser
             return null;
         }
 
-        return new CurrentUser(id.Value, null);
+        return new CurrentUser(id.Value, username);
     }
 }
