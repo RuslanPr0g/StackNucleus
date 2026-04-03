@@ -8,6 +8,7 @@ on:
 env:
   SOLUTION_PATH: "src/StackNucleus.sln"
   NUGET_SRC_URL: "https://api.nuget.org/v3/index.json"
+  NUGET_DIR: "nupkg"
 
 jobs:
   publish:
@@ -32,9 +33,15 @@ jobs:
           dotnet --version
           dotnet nuget --version
 
+      - name: Prepare NuGet output directory
+        if: ${{ steps.newtag.outputs.tag != '' }}
+        run: mkdir -p ${{ env.NUGET_DIR }}
+
       - name: Pack
-        run: dotnet pack ${{ env.SOLUTION_PATH }} --no-restore --configuration Release -o ./${{ env.NUGET_DIR }}
+        if: ${{ steps.newtag.outputs.tag != '' }}
+        run: dotnet pack ${{ env.SOLUTION_PATH }} --no-restore --configuration Release -o ${{ env.NUGET_DIR }}
 
       - name: Publish to NuGet.org
+        if: ${{ steps.newtag.outputs.tag != '' }}
         run: |
-          dotnet nuget push ./${{ env.NUGET_DIR }}/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ env.NUGET_SRC_URL }} --skip-duplicate
+          dotnet nuget push ${{ env.NUGET_DIR }}/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ env.NUGET_SRC_URL }} --skip-duplicate
