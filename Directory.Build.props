@@ -1,17 +1,18 @@
 <Project>
-  <PropertyGroup>
-    <TargetFrameworks>net10.0</TargetFrameworks>
-    <Version>4.0.0</Version>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>RuslanPr0g</Authors>
-    <Company>StackNucleus Contributors</Company>
-    <Product>StackNucleus</Product>
-    <Description>Modular DDD building blocks — entities, aggregates, repositories, and services for enterprise apps.</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/RuslanPr0g/StackNucleus</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>ddd modular entity aggregate enterprise</PackageTags>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net10.0</TargetFrameworks>
+		<Version>4.1.0</Version>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Authors>RuslanPr0g</Authors>
+		<Company>StackNucleus Contributors</Company>
+		<Product>StackNucleus</Product>
+		<Description>Modular DDD building blocks — entities, aggregates, repositories, and services for enterprise apps.</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/RuslanPr0g/StackNucleus</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>ddd modular entity aggregate enterprise</PackageTags>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+	</PropertyGroup>
 </Project>
