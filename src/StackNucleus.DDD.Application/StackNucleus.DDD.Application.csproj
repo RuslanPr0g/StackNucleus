@@ -8,20 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Extensions\ConfigurationExtensions.cs~RF46e049.TMP" />
-    <None Remove="Extensions\ConfigurationExtensions.cs~RF46fde3.TMP" />
-  </ItemGroup>
-
-  <ItemGroup>
       <None Include="README.md" Pack="true" PackagePath="\" />
       <None Include="../SharedMetadata/CHANGELOG.md" Pack="true" PackagePath="\" />
       <None Include="../SharedMetadata/logo.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.4" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.4" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.5" />
   </ItemGroup>
 
 </Project>
