@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Npgsql;
 using StackNucleus.DDD.Persistence.EF.Postgres.Interceptors;
 
 namespace StackNucleus.DDD.Persistence.EF.Postgres.Extensions;
@@ -36,6 +37,9 @@ public static class DIExtensions
     /// <param name="migrateDatabase">
     /// Whether to migrate the database at startup. Default is true.
     /// </param>
+    /// <param name="configureDataSource">
+    /// Additional settings for the configuration of data source.
+    /// </param>
     /// <returns>
     /// The <see cref="IServiceCollection"/> to allow for method chaining.
     /// </returns>
@@ -45,41 +49,42 @@ public static class DIExtensions
     /// for handling domain events.
     /// </remarks>
     public static IServiceCollection AddConfigurablePersistenceContext<TContext>(
-        this IServiceCollection services,
-        IConfiguration configuration,
-        string migrationsAssemblyName,
-        string connectionStringName = "postgres",
-        string migrationsHistoryTableSchemaName = "public",
-        bool migrateDatabase = true)
-        where TContext : DbContext
+            this IServiceCollection services,
+            IConfiguration configuration,
+            string migrationsAssemblyName,
+            string connectionStringName = "postgres",
+            string migrationsHistoryTableSchemaName = "public",
+            bool migrateDatabase = true,
+            Action<NpgsqlDataSourceBuilder>? configureDataSource = null)
+            where TContext : DbContext
     {
         services.AddSingleton<ConvertDomainEventsToOutboxMessagesInterceptor>();
-
         var mainConnectionString = configuration.GetConnectionString(connectionStringName);
-
+        services.AddSingleton(sp =>
+        {
+            var dataSourceBuilder = new NpgsqlDataSourceBuilder(mainConnectionString);
+            configureDataSource?.Invoke(dataSourceBuilder);
+            return dataSourceBuilder.Build();
+        });
         services.AddDbContext<TContext>((sp, builder) =>
         {
-            var interceptor = sp.GetService<ConvertDomainEventsToOutboxMessagesInterceptor>();
-
+            var interceptor = sp.GetRequiredService<ConvertDomainEventsToOutboxMessagesInterceptor>();
+            var dataSource = sp.GetRequiredService<NpgsqlDataSource>();
             builder.UseNpgsql(
-                    mainConnectionString,
+                    dataSource,
                     b =>
                     {
                         b.MigrationsAssembly(migrationsAssemblyName)
-                            .MigrationsHistoryTable("__EFMigrationsHistory", migrationsHistoryTableSchemaName);
+                         .MigrationsHistoryTable("__EFMigrationsHistory", migrationsHistoryTableSchemaName);
                     })
-                .AddInterceptors(interceptor!);
+                .AddInterceptors(interceptor);
         });
-
         if (migrateDatabase)
         {
-            using (var scope = services.BuildServiceProvider().CreateScope())
-            {
-                var db = scope.ServiceProvider.GetRequiredService<TContext>();
-                db.Database.Migrate();
-            }
+            using var scope = services.BuildServiceProvider().CreateScope();
+            var db = scope.ServiceProvider.GetRequiredService<TContext>();
+            db.Database.Migrate();
         }
-
         return services;
     }
 }
